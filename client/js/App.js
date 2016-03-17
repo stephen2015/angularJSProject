@@ -7,7 +7,7 @@ angular.module('app', dependencies);
 
 //路由模块
 angular.module('routeConfig', ['ngRoute']).config(function ($routeProvider) {
-    var routes = ['view1', 'view2', 'partials/state1', 'partials/state2'];
+    var routes = ['partials/view1', 'partials/view2', 'partials/state1', 'partials/state2'];
     var setRoutes = function (route) {
         var url = '/' + route;
         var config = {

@@ -1,10 +1,10 @@
 <div class="nav-container" ng-controller="AccordionDemoCtrl">
     <uib-accordion close-others="oneAtTime" class="nav" >
-        <uib-accordion-group heading="Static Header, initially expanded" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled" style="background-color: #f5f5f5">
-            <li><a href="#/view1"><i class="fa fa-caret-right"></i><span>&nbsp;</span>车次计划</a></li>
-            <li><a href="#/view2"><i class="fa fa-caret-right"></i><span>&nbsp;</span>运行图计划</a></li>
-            <li><a href="#/view1"><i class="fa fa-caret-right"></i><span>&nbsp;</span>运行图调整</a></li>
-            <li><a href="#/view2"><i class="fa fa-caret-right"></i><span>&nbsp;</span>日运行图查看</a></li>
+        <uib-accordion-group heading="车次管理" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled" style="background-color: #f5f5f5">
+            <li><a href="#/partials/view1"><i class="fa fa-caret-right"></i><span class="col-sm-offset-1"></span>车次计划</a></li>
+            <li><a href="#/partials/view2"><i class="fa fa-caret-right"></i><span class="col-sm-offset-1"></span>运行图计划</a></li>
+            <li><a href="#/partials/view1"><i class="fa fa-caret-right"></i><span class="col-sm-offset-1"></span>运行图调整</a></li>
+            <li><a href="#/partials/view2"><i class="fa fa-caret-right"></i><span class="col-sm-offset-1"></span>日运行图查看</a></li>
         </uib-accordion-group>
         <uib-accordion-group heading="{{group.title}}" ng-repeat="group in groups">
             {{group.content}}
@@ -14,7 +14,7 @@
             <button type="button" class="btn btn-default btn-sm" ng-click="addItem()">Add Item</button>
             <div ng-repeat="item in items">{{item}}</div>
         </uib-accordion-group>
-        <uib-accordion-group heading="Custom template" template-url="group-template.html">
+        <uib-accordion-group heading="Custom template">
             Hello
         </uib-accordion-group>
         <uib-accordion-group heading="Delete account" panel-class="panel-danger">
@@ -28,37 +28,18 @@
             This is just some content to illustrate fancy headings.
         </uib-accordion-group>
     </uib-accordion>
-    <!--<ul id="nav" class="nav">-->
-    <!--<li>-->
-    <!--<a href="#/partials"><i class="glyphicon glyphicon-indent-right"></i>车次管理</a>-->
-    <!--<ul ng-show="true">-->
-    <!--<li><a href="#/view1"><i class="fa fa-caret-right"></i>车次计划</a></li>-->
-    <!--<li><a href="#/view2"><i class="fa fa-caret-right"></i>运行图计划</a></li>-->
-    <!--<li><a href="#/view1"><i class="fa fa-caret-right"></i>运行图调整</a></li>-->
-    <!--<li><a href="#/view2"><i class="fa fa-caret-right"></i>日运行图查看</a></li>-->
-    <!--</ul>-->
-    <!--</li>-->
-    <!--<li>-->
-    <!--<a href="#/partials"><i class="glyphicon glyphicon-indent-right"></i>车次管理</a>-->
-    <!--<ul ng-show="true">-->
-    <!--<li><a href="#/partials/state1"><i class="fa fa-caret-right"></i>车次计划</a></li>-->
-    <!--<li><a href="#/partials/state2"><i class="fa fa-caret-right"></i>运行图计划</a></li>-->
-    <!--<li><a href="#/partials/state1"><i class="fa fa-caret-right"></i>运行图调整</a></li>-->
-    <!--<li><a href="#/partials/state2"><i class="fa fa-caret-right"></i>日运行图查看</a></li>-->
-    <!--</ul>-->
-    <!--</li>-->
-    <!--</ul>-->
+
 </div>
-<script type="text/ng-template" id="group-template.html">
-    <div class="panel {{panelClass || 'panel-default'}}">
-        <div class="panel-heading">
-            <h4 class="panel-title" style="color:#fa39c3">
-                <a href tabindex="0" class="accordion-toggle" ng-click="toggleOpen()" uib-accordion-transclude="heading"><span
-                        ng-class="{'text-muted': isDisabled}">{{heading}}</span></a>
-            </h4>
-        </div>
-        <div class="panel-collapse collapse" uib-collapse="!isOpen">
-            <div class="panel-body" style="text-align: right" ng-transclude></div>
-        </div>
-    </div>
-</script>
+<!--<script type="text/ng-template" id="group-template.html">-->
+    <!--<div class="panel {{panelClass || 'panel-default'}}">-->
+        <!--<div class="panel-heading">-->
+            <!--<h4 class="panel-title" style="color:#fa39c3">-->
+                <!--<a href tabindex="0" class="accordion-toggle" ng-click="toggleOpen()" uib-accordion-transclude="heading"><span-->
+                        <!--ng-class="{'text-muted': isDisabled}">{{heading}}</span></a>-->
+            <!--</h4>-->
+        <!--</div>-->
+        <!--<div class="panel-collapse collapse" uib-collapse="!isOpen">-->
+            <!--<div class="panel-body" style="text-align: right" ng-transclude></div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</script>-->
