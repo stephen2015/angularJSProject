@@ -1,0 +1,22 @@
+{
+  "name": "compassdemo",
+  "description": "A starter project for AngularJS",
+  "version": "0.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "~1.3.9",
+    "angular-route": "~1.5.0",
+    "bootstrap": "~3.3.6"
+  },
+  "authors": [
+    "humin <57751605@qq.com>"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "devDependencies": {
+    "angular-bootstrap": "~1.2.1",
+    "angular-ui": "~0.4.0",
+    "fontawesome": "~4.5.0"
+  }
+}

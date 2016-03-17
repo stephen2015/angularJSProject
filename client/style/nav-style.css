@@ -1,0 +1,74 @@
+.nav-container {
+    margin: 10px auto 30px auto;
+    text-align: left;
+    width: 240px;
+}
+.nav-container a {
+    background: -moz-linear-gradient(center top , #FFFFFF 1%, #EAEAEA 100%) repeat scroll 0 0 transparent;
+    box-shadow: 0 0 0 1px rgba(155, 155, 155, 0.3), 1px 0 0 0 rgba(255, 255, 255, 0.9) inset, 0 2px 2px rgba(0, 0, 0, 0.1);
+    color: #777777;
+    cursor: pointer;
+    display: block;
+    font-family: 'BebasNeueRegular','Arial Narrow',Arial,sans-serif;
+    font-size: 13px;
+    height: 30px;
+    line-height: 27px;
+    padding: 5px 20px;
+    position: relative;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8);
+    z-index: 20;
+}
+.nav-container a:hover {
+    background: none repeat scroll 0 0 #FFFFFF;
+}
+.nav-container input:checked + a, .nav-container input:checked + a:hover {
+    background: none repeat scroll 0 0 #C6E1EC;
+    box-shadow: 0 0 0 1px rgba(155, 155, 155, 0.3), 0 2px 2px rgba(0, 0, 0, 0.1);
+    color: #3D7489;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6);
+}
+.nav-container a:hover:after, .nav-container input:checked + a:hover:after {
+    background: url("../images/arrow_down.png") no-repeat scroll center center transparent;
+    content: "";
+    height: 24px;
+    position: absolute;
+    right: 13px;
+    top: 7px;
+    width: 24px;
+}
+.nav-container input:checked + a:hover:after {
+    background-image: url("../images/arrow_up.png");
+}
+.nav-container input {
+    display: none;
+}
+.nav-container article {
+    -moz-transition: height 0.3s ease-in-out 0s, box-shadow 0.6s linear 0s;
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.5);
+    height: 0;
+    margin-top: -1px;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+}
+.nav-container article p {
+    color: #777777;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 23px;
+    padding: 20px;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8);
+}
+.nav-container input:checked ~ article {
+    -moz-transition: height 0.5s ease-in-out 0s, box-shadow 0.1s linear 0s;
+    box-shadow: 0 0 0 1px rgba(155, 155, 155, 0.3);
+}
+.nav-container input:checked ~ article.ac-small {
+    height: 140px;
+}
+.nav-container input:checked ~ article.ac-medium {
+    height: 180px;
+}
+.nav-container input:checked ~ article.ac-large {
+    height: 230px;
+}
