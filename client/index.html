@@ -21,12 +21,13 @@
 </head>
 <body ng-app="app">
 
-<div ng-include="'html/headerBar.html'" id="header" ng-controller="HeaderCtrl" style="height: 100px;background-color: #31b0d5;color: snow"></div>
+<div ng-include="'html/headerBar.html'" id="header" ng-controller="HeaderCtrl" style="height: 100px;background-color: #31b0d5;color: snow;margin-bottom: -5px;"></div>
 
 <div>
-    <aside ng-include="'html/navigationBar.html'" id="nav-container" style="height:853px;width: 240px;background-color: #999999" class="col-sm-2"></aside>
+    <aside ng-include="'html/navigationBar.html'" id="nav-container" style="height:853px;width: 260px;background-color: #999999" class="col-sm-2"></aside>
 
     <div ng-view id="content" class="col-sm-10"></div>
 </div>
+
 </body>
 </html>
