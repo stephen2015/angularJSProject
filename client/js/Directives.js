@@ -27,4 +27,33 @@ directivesModule.directive('hello', function () {
             //console.info(angular.toJson(ctrl.$parsers));
         }
     }
+}).directive('bdzEcharts', function () {
+    return {
+        restrict: 'EA',
+        template: '<div></div>',
+        replace: true,
+        scope: {
+            option: '=?'
+        },
+        link: function (scope, element, attrs) {
+            scope.$watch('option', function () {
+                var getChart = function () {
+                    var myChart = echarts.init(element[0]);
+                    myChart.setOption(scope.option);
+                };
+                if (!window.echarts) {
+                    $.ajax({
+                        async: false,
+                        url: "/assets/vendor/echarts/2.0.3/build/echarts-plain.js",
+                        dataType: "script",
+                        success: function () {
+                            getChart();
+                        }
+                    });
+                } else {
+                    getChart();
+                }
+            })
+        }
+    }
 });
